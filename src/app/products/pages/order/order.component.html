@@ -29,3 +29,28 @@
 		></p-button>
 	</div>
 </p-toolbar>
+
+<div class="grid">
+	<div class="col mt-2">
+		<p-panel>
+			<p-table [value]="heroes" [tableStyle]="{ 'min-width': '50rem' }">
+				<ng-template pTemplate="header">
+					<tr>
+						<th>id</th>
+						<th>Name</th>
+						<th>Color</th>
+						<th>Can Fly</th>
+					</tr>
+				</ng-template>
+				<ng-template pTemplate="body" let-hero>
+					<tr>
+						<td>{{ hero.id }}</td>
+						<td>{{ hero.name }}</td>
+						<td>{{ hero.canFly | canFly }}</td>
+						<td>{{ hero.color }}</td>
+					</tr>
+				</ng-template>
+			</p-table>
+		</p-panel>
+	</div>
+</div>
