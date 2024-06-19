@@ -6,13 +6,17 @@ import { BasicPageComponent } from './pages/basic-page/basic-page.component';
 import { NumbersPageComponent } from './pages/numbers-page/numbers-page.component';
 import { UncommonPageComponent } from './pages/uncommon-page/uncommon-page.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+import { OrderComponent } from './pages/order/order.component';
+import { TogglePipe } from './pages/pipes/toggle-case.pipe';
 
 @NgModule({
-  declarations: [
-    BasicPageComponent,
-    NumbersPageComponent,
-    UncommonPageComponent,
-  ],
-  imports: [CommonModule, PrimeNgModule, ProductsRoutingModule],
+	declarations: [
+		BasicPageComponent,
+		NumbersPageComponent,
+		UncommonPageComponent,
+		OrderComponent,
+		TogglePipe,
+	],
+	imports: [CommonModule, PrimeNgModule, ProductsRoutingModule],
 })
 export class ProductsModule {}

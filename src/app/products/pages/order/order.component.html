@@ -1,0 +1,31 @@
+<p-panel header="Custom Pipes" class="p-1">
+	<p>Custom pipes are created by the developer</p>
+	<pre>DooR | {{ 'DooR' | toggleCase : isUpperCase }}</pre>
+	<pre>kiSS | {{ 'kiSS' | toggleCase : !isUpperCase }}</pre>
+</p-panel>
+
+<p-toolbar>
+	<div class="p-toolbar-group-start">
+		<p-button
+			label="Toggle Case"
+			icon="pi pi-refresh"
+			(click)="toggleCase()"
+		></p-button>
+	</div>
+
+	<div class="p-toolbar-group-end">
+		<p-button
+			class="mr-2"
+			label="By name"
+			icon="pi pi-sort"
+			styleClass="p-button-danger"
+		></p-button>
+		<p-button class="mr-2" label="Can fly" icon="pi pi-sort"></p-button>
+		<p-button
+			class="mr-2"
+			label="By Color"
+			icon="pi pi-sort"
+			styleClass="p-button-help"
+		></p-button>
+	</div>
+</p-toolbar>
