@@ -1,1 +1,71 @@
-<p>uncommon-page works!</p>
+<p-panel header="Uncommon Pipes" class="p-1">
+	<p>
+		Uncommon pipes are the pipes that are not used frequently. These pipes
+		are used in specific scenarios.
+	</p>
+</p-panel>
+
+<div class="grid">
+	<div class="col12 md:col-6">
+		<p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+			<p>Welcome {{ gender | i18nSelect : invitationMap }} {{ name }}</p>
+			<p-button (click)="changeGender()">change gender</p-button>
+		</p-fieldset>
+	</div>
+
+	<div class="col12 md:col-6">
+		<p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+			<p>
+				We have
+				{{ guests.length | i18nPlural : pluralMap }} guest in the queue.
+			</p>
+			<p-button (click)="removeGuest()">remove client</p-button>
+		</p-fieldset>
+	</div>
+
+	<div class="col12 md:col-6">
+		<p-fieldset legend="Slice Pipe" [toggleable]="true">
+			<b>Original: {{ guests.join(', ') }}</b>
+			<p>1 to 2: {{ guests | slice : 1 : 2 }}</p>
+			<p>2 to 4: {{ guests | slice : 1 : 2 }}</p>
+		</p-fieldset>
+	</div>
+
+	<div class="col12 md:col-6">
+		<p-fieldset legend="Async Pipe" [toggleable]="true">
+			<ul>
+				<li *ngFor="let item of person | keyvalue">
+					{{ item.key }}: {{ item.value }}
+				</li>
+			</ul>
+		</p-fieldset>
+	</div>
+	<div class="col12 md:col-6">
+		<p-fieldset legend="Json Pipe" [toggleable]="true">
+			<p>{{ person | json }}</p>
+		</p-fieldset>
+	</div>
+
+	<div class="col12 md:col-6">
+		<p-fieldset legend="Async Pipe" [toggleable]="true">
+			<pre
+				*ngIf="
+					(myObservableTimer | async) === null ||
+					(myObservableTimer | async) === undefined
+				"
+			>
+resolving </pre
+			>
+			<pre>{{ myObservableTimer | async }}</pre>
+			<pre
+				*ngIf="
+					(promiseValue | async) === null ||
+					(promiseValue | async) === undefined
+				"
+			>
+ resolving promise </pre
+			>
+			<pre>{{ promiseValue | async }}</pre>
+		</p-fieldset>
+	</div>
+</div>

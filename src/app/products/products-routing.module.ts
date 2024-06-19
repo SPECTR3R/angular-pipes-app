@@ -10,7 +10,7 @@ const routes: Routes = [
     component: BasicPageComponent,
   },
   {
-    path: 'number',
+    path: 'numbers',
     component: NumbersPageComponent,
   },
   {
@@ -19,7 +19,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '',
+    redirectTo: '/',
   },
 ];
 

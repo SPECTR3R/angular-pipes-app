@@ -47,6 +47,9 @@
 	},
 	"cSpell.words": [
 		"debouncer",
-		"primeng"
-	]
+		"primeng",
+		"Titlecase",
+		"toggleable"
+	],
+	"html.format.wrapAttributes": "force-aligned"
 }
