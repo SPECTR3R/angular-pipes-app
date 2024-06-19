@@ -14,7 +14,11 @@ export class OrderComponent {
 		{ id: 3, name: 'Flash', canFly: false, color: Color.red },
 		{ id: 4, name: 'Wonderman', canFly: true, color: Color.gold },
 	];
+	sortKey: keyof Hero | null = null;
 
+	setSortKey(sortKey: keyof Hero) {
+		this.sortKey = sortKey;
+	}
 	toggleCase() {
 		this.isUpperCase = !this.isUpperCase;
 	}
